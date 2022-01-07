@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            text-transform: capitalize;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            /* width: 100%; */
+            height: 100vh;
+            /* background: blue; */
+        }
+
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navBar {
+            width: 100%;
+        }
+
+
+        .logo {
+            width: 30%;
+            /* background: wheat; */
+            align-content: center;
+
+        }
+
+        .nav {
+            width: 50%;
+            align-items: center;
+            justify-content: space-evenly;
+            background: white;
+        }
+
+        .cart {
+            width: 20%;
+            background: yellow;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        .image {
+            width: 40%;
+
+        }
+
+        .navLink {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: black;
+        }
+
+        .loginBtn {
+            width: 120%;
+            font-size: 1.5rem;
+            text-align: center;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            background: #F2DDC1;
+            color: #FF7800;
+
+        }
+
+        .loginBtn:hover {
+            background: #AA14F0;
+            color: white;
+            transition: 1s ease-in;
+        }
+
+        .loginBtn:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+
+        .clearCart {
+            position: absolute;
+            left: 65rem;
+            background: white;
+            border-radius: 5px;
+               /* width: 19%;*/
+            text-align: center;
+            display: none;
+        }
+
+        .ClearAll {
+            width: 60%;
+            height: 5vh;
+            color: white;
+            background: blue;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .rowProduct {
+            width: 100%;
+            /* background: blue; */
+            /* margin-top: -10em;
+            margin-left: 5em; */
+        }
+
+        .row-1 {
+            width: 25%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .row-2 {
+            width: 25%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .row-3 {
+            width: 25%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        }
+
+        .row-4 {
+            width: 25%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        }
+
+        /* .row-5 {
+            width:25%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        } */
+
+        .pdImage img {
+            width: 50%;
+        }
+
+        h1 {
+            font-size: 1rem;
+            color: #FF7800;
+        }
+
+        .price {
+            font-weight: bold;
+        }
+
+
+        .remove {
+            color: white;
+            background: red;
+            float: right;
+            border-radius: 50%;
+        }
+
+    .remove:hover{
+            background: black;
+            border-radius: 50%;
+            color: white;
+        }
+        .pdAdd {
+            width: 60%;
+            height: 5vh;
+            border: none;
+            outline: none;
+            background: blue;
+            color: white;
+            border-radius: 5px;
+            transition: 1s ease-in;
+            box-shadow: 0 9px #999;
+        }
+
+        .pdAdd:active {
+            background-color: blue;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        .addCartImg {
+            width: 300px;
+            /* display: flex; */
+        }
+
+        .sideBarContainer {
+            width: 100%;
+            margin-top: 2em;
+        }
+
+        .sideNav {
+            width: 20%;
+        }
+
+        .sideBar {
+            width: 60%;
+            margin-left: 1em;
+            border: none;
+            outline: none;
+            background: brown;
+        }
+
+        /* .emtpynav{
+    width: 80%;
+} */
+        .sidenav {
+            margin-top: 2em;
+            display: none;
+            z-index: 100;
+            position: absolute;
+            left: 0.5em;
+            background: black;
+            transition: all 1s;
+            transform: translateX(6px);
+        }
+
+        .sidenavLink {
+            text-decoration: none;
+            color: #666;
+            font-size: 1.5rem;
+        }
+
+        .display {
+            display: block;
+            transition: all 1s;
+
+        }
+        .count{
+            position: absolute;
+            top:-2px;
+            right: 69px;
+            background:white;
+            width: 20px;
+               height: 20px;
+               color: blue;
+               border-radius: 50%;
+              text-align: center;
+        }
+
+        @media only screen and (max-width: 500px) {
+            .nav {
+                display: none;
+            }
+
+            .cart {
+                gap: 2rem;
+            }
+
+            .sideContain {
+                margin-left: -1.4rem;
+            }
+
+            .loginBtn {
+                font-size: 0.9rem;
+            }
+
+            .cartImg {
+                width: 50%;
+            }
+
+            .rowProduct {
+                width: 90%;
+
+            }
+
+            h1 {
+                font-size: 0.5rem;
+            }
+
+            .price {
+                font-size: 0.5rem;
+            }
+
+            .pdAdd {
+                width: 60%;
+                height: 10vh;
+            }
+        }
+
+        @media only screen and (max-width: 650px) {
+            .nav {
+                display: none;
+            }
+
+            .cart {
+                gap: 2rem;
+            }
+
+            .sideContain {
+                margin-left: -1.4rem;
+            }
+
+            .loginBtn {
+                font-size: 0.9rem;
+            }
+
+            .cart {
+                width: 50%;
+            }
+
+            .rowProduct {
+                width: 100%;
+                display: block;
+            }
+
+            h1 {
+                font-size: 0.5rem;
+            }
+
+            .price {
+                font-size: 0.5rem;
+            }
+
+            .pdAdd {
+                width: 60%;
+                height: 10vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container ">
+        <div class="navBar flex">
+            <div class="logo"> <img src="./images/logo.png" alt="" srcset="" class="image">
+            </div>
+            <div class="nav flex ">
+                <div class="navList">
+                    <a href="#" class="navLink"> home</a>
+                </div>
+                <div class="navList">
+                    <a href="#" class="navLink">gallery </a>
+                </div>
+                <div class="navList">
+                    <a href="#" class="navLink">media </a>
+                </div>
+                <div class="navList">
+                    <a href="#" class="navLink"> arcontact us</a>
+                </div>
+            </div>
+            <div class="cart flex">
+                <div class="login">
+                    <button class="loginBtn">login </button>
+                </div>
+                <div class="addCart" onclick="cartBar()">
+
+                    <img src="./images/cart.png" alt="" srcset="" class="cartImg">
+                    <div class="count">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="clearCart">
+          
+                <table class="addCartImg">
+
+                <!-- <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th></th>
+                    </tr>
+                </thead> -->
+            <tbody></tbody>
+          
+            </table>
+            <button class="clearBtn"> <a href="#" class="ClearAll"> clear Cart </a> </button>
+        </div>
+
+        <div class="sideBarContainer">
+            <div class="sideNav flex ">
+                <div class="icon">
+                    <button class="sideBar" onclick="siderBar()">&#x2630</button>
+                </div>
+                <div class="sideContain">
+                    <div class="sidenav ">
+                        <div class="sidenavList">
+                            <a href="#" class="sidenavLink"> home</a>
+                        </div>
+                        <div class="sidenavList">
+                            <a href="#" class="sidenavLink">gallery </a>
+                        </div>
+                        <div class="sidenavList">
+                            <a href="#" class="sidenavLink">media </a>
+                        </div>
+                        <div class="sidenavList">
+                            <a href="#" class="sidenavLink"> contact us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="emtpynav">
+
+                </div>
+            </div>
+
+        </div>
+        <div class="rowProduct flex ">
+            <div class="row-1 ">
+                <div class="product">
+                    <div class="pdImage">
+                        <img src="./images/jpg.jpg" alt="" srcset="" class="images">
+                        <h1>product Name 1</h1>
+                        <p class="price"> price :500 rs</p>
+                        <button class="pdAdd"  data-id="1"><a herf="#" class="add-to-cart">add to cart</a></button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row-2">
+                <div class="product">
+                    <div class="pdImage">
+                        <img src="./images/jpg.jpg" alt="" srcset="" class="images">
+                        <h1>product Name 2</h1>
+                        <p class="price"> price :500 rs</p>
+                        <button class="pdAdd"><a herf="#" class="add-to-cart" data-id="2">add to cart</a></button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row-3">
+                <div class="product">
+                    <div class="pdImage">
+                        <img src="./images/jpg.jpg" alt="" srcset="" class="images">
+                        <h1>product Name 3</h1>
+                        <p class="price"> price :500 rs</p>
+                        <button class="pdAdd"><a herf="#" class="add-to-cart" data-id="3">add to cart</a></button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row-4">
+                <div class="product">
+                    <div class="pdImage">
+                        <img src="./images/jpg.jpg" alt="" srcset="" class="images">
+                        <h1>product Name 4</h1>
+                        <p class="price"> price :500 rs</p>
+                        <button class="pdAdd"><a herf="#" class="add-to-cart" data-id="4">add to cart</a></button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        let addCouse = document.querySelector(".rowProduct")
+     let shoppingCart = document.querySelector(".addCartImg tbody")
+        let clear = document.querySelector(".ClearAll")
+
+        addCart();
+
+        function addCart() {
+            addCouse.addEventListener("click", buyproduct);
+            shoppingCart.addEventListener("click" ,removeItem)
+            clear.addEventListener("click", clearCart)
+            document.addEventListener("DOMContentLoaded", getFromLs)
+        }
+
+        function buyproduct(e) {
+            e.preventDefault();
+
+            if (e.target.classList.contains("add-to-cart")) {
+                let product = e.target.parentElement.parentElement.parentElement;
+                getProduct(product)
+            }
+
+
+        }
+
+        function getProduct(product) {
+            let productInfo = {
+                image: product.querySelector("img").src,
+                title: product.querySelector("h1").innerText,
+                price: product.querySelector(".price").innerText,
+                id: product.querySelector("a").getAttribute("data-id")
+            }
+            addCartItem(productInfo)
+        }
+
+        function addCartItem(product) {
+            let row = document.createElement("tr")
+             
+          row.innerHTML=` <tr>
+                        <td> <img src = '${product.image}' width="50%">
+                            </td>
+                            <td> ${product.title} 
+                            </td>
+                            <td> ${product.price}
+                            </td>
+                            <td> <a href ="#" class = "remove" data-id = "${product.id}">X</a>
+                            </td>
+                           </tr>`
+        
+            shoppingCart.appendChild(row)
+
+            saveLocalStorage(product)
+
+        }
+      
+
+
+
+   
+        
+      function  saveLocalStorage(product){
+             let products = getLocalProduct();
+                
+             products.push(product)
+           localStorage.setItem("products",JSON.stringify(products))
+         count()
+      }
+    
+      function count(){
+        let count = JSON.parse(localStorage.getItem("products")).length;
+          let countNumber=document.querySelector(".count")
+          countNumber.innerHTML = `${count}`;
+            
+          
+      }
+      
+      function getLocalProduct(){
+          let product;
+
+          if(localStorage.getItem("products")=== null){
+            product=[];
+          }else{
+            product =JSON.parse(localStorage.getItem("products"))
+          }
+          return product;
+      }
+
+       function removeItem(e){
+ let product ,productId;            
+               
+                    if(e.target.classList.contains("remove")){
+                        e.target.parentElement.parentElement.remove();
+                        product=e.target.parentElement.parentElement;
+                        productId = product.querySelector("a").getAttribute("data-id")
+                    }
+                    console.log(productId)
+                    removeItemLs(productId);
+       }
+
+       function  removeItemLs(id){
+        let productrls = getLocalProduct();
+        productrls.forEach(function (productrels ,index){
+            if(productrels.id ===id){
+                productrls.splice(index,1)
+            }
+        })
+        localStorage.setItem("products",JSON.stringify(productrls))
+       count()
+       }
+
+       function clearCart(e){
+                   while(shoppingCart.firstChild){
+                    shoppingCart.removeChild(shoppingCart.firstChild)
+                   }
+                   clearCartLs()
+       }
+
+       function clearCartLs(){
+           localStorage.clear()
+       }
+
+      function getFromLs(){
+        let productsLS = getLocalProduct();
+        productsLS.forEach(function(product) {
+            let rows = document.createElement("tr")
+             
+             rows.innerHTML=` <tr>
+                           <td> <img src = '${product.image}' width="50%">
+                               </td>
+                               <td> ${product.title} 
+                               </td>
+                               <td> ${product.price}
+                               </td>
+                               <td> <a href ="#" class = "remove" data-id = "${product.id}">X</a>
+                               </td>
+                              </tr>`
+           
+               shoppingCart.appendChild(rows)
+   
+        });
+        count()
+      }
+
+
+       function siderBar() {
+
+let display = document.querySelector(".sidenav");
+display.classList.toggle("display")
+
+}
+
+function cartBar() {
+let displays = document.querySelector(".clearCart");
+
+displays.classList.toggle("display")
+}
+    
+    </script>
+</body>
+
+</html>
