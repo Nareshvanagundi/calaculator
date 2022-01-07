@@ -1,0 +1,297 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background: #F6EABE;
+}
+
+.nav{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background:#636e72;
+}
+.logo-brand{
+    width: 20%;
+    /* background:violet; */
+}
+.navBar-content{
+    width: 50%;
+    /* background: yellow; */
+}
+.nav-login{
+    width: 30%;
+    display: flex;
+    margin-right: 2em;
+    justify-content: end;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    align-items: center;
+    /* background:orange; */
+}
+.logoFlex{
+    display: flex;
+}
+.logo-leftTop{
+    margin: 10px 20px;
+    transform: rotate(50deg);
+}
+.brandName{
+       text-decoration: none;
+     margin:5px;
+     color: black;
+     font-family: 'Zen Old Mincho', serif;
+     font-size: 2rem;
+}
+
+ul.navBar{
+display: flex;
+flex-wrap: nowrap;
+justify-content:center;
+align-items: center;
+gap: 4rem;
+font-family: 'Zen Old Mincho', serif;
+font-size: 0.9rem;
+}
+.navItem,.navLink{
+  list-style: none;
+  color: black;
+    text-transform: capitalize;
+    text-decoration: none;
+
+}
+.navItem:hover{
+text-decoration: underline;
+border-radius: 17px;
+}
+.navItem{
+    position: relative;
+}
+
+.nav-Platform, .platformItem,.platformLink{
+    list-style: none;
+    color:black;
+}
+.nav-Platform{
+    position: absolute;
+
+    display: none;
+}
+li .platformItem{
+    width:200px;
+    margin-left:-15px;
+    /* background: #B91646; */
+}
+a.platformLink{
+    width:50%;
+    font-size: 20px;
+}
+.navItem:hover> .nav-Platform{
+    padding: 10px;
+    font-size: 1rem;
+    display: block;
+}
+
+
+.loginBtn,.signBtn{
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    background: none;
+    font-family: 'Zen Old Mincho', serif;
+    text-transform: capitalize;
+}
+.signBtn:hover{
+    background:palevioletred;
+    border-radius: 17px;
+}
+.loginBtn:hover{
+    background:palevioletred;
+    border-radius: 17px;
+}
+button.loginBtn,button.signBtn{
+    width: 139%;
+    height: 8vh;
+    border-radius: 17px;
+}
+.mastercard{
+    /* margin: auto; */
+    width: 60%;
+    margin-left:20%;
+    /* background: rgb(136, 135, 134); */
+}
+.row-1{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  /* margin:0 auto; */
+  /* gap: 1rem; */
+    align-items: center;
+    /* background: olive; */
+}
+.ms-Card1{
+    width: 40%;
+    height: 150px;
+    margin: 0.5em 0.3em 0.5em 0;
+    border-radius: 17px;
+    background:#F9F3DF;
+}
+.ms-Card2{
+    width: 40%;
+    height: 150px;
+    border-radius: 17px;
+    background:#D7E9F7;
+}
+.row-2{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  /* margin:0 auto;
+  gap: 1rem; */
+    align-items: center;
+    /* background: olive; */
+}
+.ms-Card3{
+    width: 40%;
+    height: 150px;
+    margin: 0.5em 0.3em 0.5em 0;
+    border-radius: 17px;
+    background:#DFD8CA;
+}
+.ms-Card4{
+    width: 40%;
+    height: 150px;
+    border-radius: 17px;
+    background:#B91646;
+}
+img.masterCard1{
+    width: 50%;
+    height: 102px;
+    float: right;
+    margin-top: 3rem;
+}
+img.masterCard2{
+    width: 50%;
+    height: 102px;
+    margin-top: 3rem;
+}
+img.masterCard3{
+    width: 50%;
+    float: right;
+    height: 102px;
+}
+img.masterCard4{
+    width: 50%;
+    height: 102px;
+}
+.heading{
+    width: 60%;
+    margin:0 auto;
+    /* background: #B91646; */
+}
+.headingRow-3 ,.headingRow-4 ,.headingRow-5{
+    font-family: 'Zen Old Mincho', serif;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    margin-left: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.toggleicon{
+    display: none;
+}
+.navslider{
+    display: none;
+    float: right;
+  margin-top: -2.96em;
+  margin-right: -3em;
+}
+ li a{
+     text-align: center;
+     align-items: center;
+    text-decoration: none;
+}
+
+.navslide,.list li {  
+
+list-style: none;
+background: #636e72;
+margin: 3rem;
+text-decoration: none;
+}
+
+.close{
+    float: right;
+    margin: 2rem;
+    display: none;
+    border: none;
+    font-size:1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+@media screen and (max-width:756px){
+
+
+    .logo-brand{
+        width: 30%;
+    }
+    .navBar-content{
+       display:none;
+    }
+   
+    .toggleicon{
+        display: block;
+    }
+.navslide{
+    position: absolute;
+    right: -50px;
+    top: 2px;
+    width: 55%;
+    
+}
+  
+   
+    .ggg{
+        transition: 3s;
+    transform: translateX(140px);
+    }
+
+}
+
+@media screen and (max-width:470px){
+    /* .logo-brand{
+        width: 30%;
+    } */
+    .navBar-content{
+       display:none;
+    }
+    .loginBtn,.signBtn{
+        font-size: 0.9rem;
+    }
+    .toggleicon{
+        display: block;
+    }
+}
+
+
