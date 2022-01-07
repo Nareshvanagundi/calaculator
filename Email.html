@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Send Mail </title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            text-transform: capitalize;
+        }
+
+        body {
+            background: linear-gradient(yellow, blue);
+
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .formConatianer {
+            width: 40%;
+            margin: 60px auto;
+            background: white;
+        }
+
+        header {
+            background: red;
+            text-align: center;
+            font-size: 1.5rem;
+            color: bisque;
+        }
+
+        .row {
+            margin-top: 40px;
+            margin-left: 40px;
+        }
+
+        .input {
+            position: relative;
+
+        }
+
+        .input label {
+            position: absolute;
+            top: -10px;
+            left: 45px;
+            transform: translateY(-10px);
+            transition: 0.5s;
+        }
+
+
+
+        .style {
+            width: 50%;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid black;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .SubmitBtn,
+        .resetBtn {
+            width: 40%;
+            height: 5vh;
+            border: none;
+            outline: none;
+            background: blue;
+            color: white;
+            border-radius: 4px;
+            transition: all ease-in;
+        }
+
+        .SubmitBtn:hover,
+        .resetBtn:hover {
+            background: red;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .submit {
+            margin-top: 20px;
+        }
+
+        .loading {
+            width: 40%;
+            align-items: center;
+            display: none;
+        }
+
+        .loadingEmail {
+            display: flex;
+            justify-content: center;
+            /* display: none; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="formConatianer">
+
+            <header>
+                Send New Email
+            </header>
+            <form action="#" class="emailForm">
+                <div class="input">
+                    <div class="inputSend row">
+                        <input type="email" name="email" id="email" class="email style remove" autocomplete="off">
+                        <label for="email"> to :</label>
+
+                    </div>
+                </div>
+
+                <div class="input">
+                    <div class="inputSubject row">
+                        <input type="text" name="subject" id="subject" class="subject style remove" autocomplete="off">
+                        <label for="subject"> subject :</label>
+
+                    </div>
+                </div>
+                    <div class="input">
+                        <div class="inputMesage row">
+                            <textarea name="message" id="message" cols="30" rows="10" class="message style remove"
+                                autocomplete="off"></textarea>
+                            <label for="message"> message : </label>
+
+                        </div>
+
+                        <div class="submit flex">
+                            <button class="SubmitBtn">send &#x2708 </button>
+                            <button class="resetBtn">reset</button>
+
+                        </div>
+                        <div class="reply"></div>
+                    </div>
+
+            </form>
+
+            <div class="loadingEmail">
+                <img src="./images/sent.gif" alt="loading" srcset="" class="loading">
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        let sumBtn = document.querySelector(".SubmitBtn")
+        let resBtn = document.querySelector(".resetBtn")
+        let email = document.querySelector(".email")
+        let subject = document.querySelector(".subject")
+        let message = document.querySelector(".message")
+        let error = document.querySelector(".remove")
+        let resetForm = document.querySelector(".emailForm")
+
+
+
+        function eventList() {
+            document.addEventListener("DOMContentLoaded", widowloaded)
+            email.addEventListener("blur", valdiationFlied)
+            subject.addEventListener("blur", valdiationFlied)
+            message.addEventListener("blur", valdiationFlied)
+            resBtn.addEventListener("click", resetAll)
+            sumBtn.addEventListener("click", sendEmail)
+        }
+        eventList();
+
+        function valdiationFlied() {
+            let error;
+            //error = document.querySelectorAll(".remove")   
+
+            if (email.value.includes("@") && subject.value !== "" && message.value !== "") {
+                sumBtn.classList.add("SubmitBtn")
+                sumBtn.disabled = false;
+            }
+
+            else {
+                sumBtn.classList.remove("SubmitBtn")
+                sumBtn.disabled = true;
+            }
+
+            valdiation(this)
+
+        }
+
+
+
+        function valdiation(input) {
+
+            if (input.value.length > 0) {
+                input.style.borderBottomColor = "green";
+                input.classList.remove("remove")
+            } else {
+                input.style.borderBottomColor = "red";
+                input.classList.add("remove")
+            }
+        }
+
+        function widowloaded(e) {
+            let sumBtn = document.querySelector(".SubmitBtn")
+            sumBtn.disabled = true;
+            sumBtn.classList.remove("SubmitBtn")
+            // window.open('mailto:abhishekballery@gmail.com?subject=subject&body=body');qqqqqqqqqqqqqqqq
+
+        }
+
+
+        function sendEmail(e) {
+            e.preventDefault();
+
+            let spinner = document.querySelector(".loading")
+            spinner.style.display = "block"
+
+            let sendMessage = document.querySelector(".reply")
+            // let reply = document.createElement("h1")
+            // reply.innerHTML = " Message As Sent "
+            // reply.style.textAlign = "center"
+            // reply.style.color = "green"
+
+            setTimeout(function () {
+                document.querySelector(".loading").style.display = "none"
+                document.querySelector(".reply").style.display = "block"
+                sendMessage.innerHTML =""
+                sendMessage.innerHTML ="Message As Sent"
+                sendMessage.style.textAlign = "center"
+                sendMessage.style.color = "green"
+                // sendMessage.appendChild(reply)
+
+            }, 3000)
+            setTimeout(function () {
+                document.querySelector(".reply").style.display = "none"
+
+                sumBtn.disabled = true;
+            sumBtn.classList.remove("SubmitBtn")
+
+                resetForm.reset();
+
+            }, 5000)
+        }
+
+
+
+
+
+        function resetAll() {
+            resetForm.reset();
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
