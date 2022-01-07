@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        /* .game{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+            background: yellowgreen;
+            gap: 2rem; 
+        }
+
+        .door{
+            width: 20%;
+            height: 50vh;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            text-align: center;
+
+            background: blue;
+            align-items: center;
+        }
+        .title{
+            text-align: center;
+        }  */
+
+
+        h1 {
+            text-align: center;
+        }
+
+        .flex {
+            display:flex;
+            justify-content: space-evenly;
+            gap: 2rem;
+
+        }
+
+        .center {
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            /* justify-content:space-evenly;  */
+            background: blue;
+            
+        }
+
+        .door {
+            width: 400px;
+            height: 50vh;
+            color: white;
+            margin-top: 50px;
+            background: yellowgreen;
+        }
+
+        .image {
+            background-size: cover;
+
+        }
+
+        .relative {
+            position: relative;
+
+        }
+
+        .absolute {
+            position: absolute;
+
+        }
+
+        .close {
+            width: 100%;
+            height: 100%;
+            color: white;
+            background: brown;
+            left: 0;
+
+        }
+
+        .open {
+            width: 0%;
+            height: 100%;
+            left: -0;
+            transition: 10s;
+            /* z-index: 1000; */
+           /* background: yellow; */
+        }
+        .hidden{
+           padding: 50px;
+           display: none;
+           align-content: center;
+        
+        }
+
+        .chocie1:hover{
+            background: orange;
+            color: azure;
+        }
+    
+        .chocie1{
+            width: 50%;
+            height: 8vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           text-transform: capitalize;
+           font-size: 1.5rem;
+           transition:0.5s;
+           transform: translateY(8px);
+        }
+        .yes-no{
+            position: absolute;
+            top:32rem;
+            left: 15rem;
+            width: 60%;
+            height: 20vh;
+            align-items: center;
+            justify-content:space-evenly;
+            gap: 0rem;
+            background:transparent;
+            display:none;
+        }
+        .chocie2{
+            width: 10%;
+            height: 8vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           text-transform: capitalize;
+           font-size: 1.5rem;
+           transition:0.5s;
+           transform: translateY(8px); 
+          
+        }
+        .chocie2:hover{
+            background: orange;
+            color: azure;
+        }
+       
+        /*.show{
+            display: block;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- <div class="title">
+    <h1>Welcome to the game Open any one door</h1>
+</div>
+
+
+       <div class="game">
+           <div class="door">1</div>
+           <div class="door">2</div>
+           <div class="door">3</div>
+       </div> -->
+
+    <div class="title">
+        <h1>Welcome to the game Open any one door</h1>
+    </div>
+
+    <div class="container  ">
+        <div class="game flex center " onclick="display()" >
+         
+              <div class="door flex center relative" data-index="1" id="td" onclick="display()" >
+                <div class="close absolute " > </div>
+                <img src="./images/Ajio-Logo.svg" alt="" class="images">
+            </div>
+           
+            <div class="door flex center relative" data-index="2" onclick="display()" >
+                <div class="close absolute"> </div>
+         jocker
+            </div>
+
+            <div class="door flex center relative" data-index="3" onclick="display()" >
+                <div class="close absolute"> </div>
+         jocker
+            </div>
+  </div>
+
+  <div class="hidden flex" id="msdBox" onclick="show()" >
+    <button class="chocie1" > <b>do you want continue ? </b>  </button>
+</div>
+
+<div class="yes-no flex" onclick="show()"  >    
+
+    <button class="chocie2" > <b> yes </b> </button>
+    <button class="chocie2"> <b> no</b> </button>
+</div>
+   
+<!-- <div class="hidden flex" id="msgBox" >
+    <h2 class="chocie1"  > <b>do you want continue ? </b>  </h2>
+ <button class="chocie2 " onclick="handle(1)"> <b> yes </b> </button>
+    <button class="chocie2" onclick="handle(0)"> <b> no</b>  </button>
+   
+</div> -->
+
+   
+</div>
+  
+
+   
+
+
+
+
+
+
+    <script>
+
+        let open = document.querySelector(".game");
+        let selection=null;
+        let  haswon=false;
+        // function open(){
+        //     open.classList.toggle("open")
+        // }
+
+
+
+        open.onclick = function (e) {
+          
+            console.log(e);
+            console.log(e.target);
+            // e.target.classList.add("open")
+            let door=e.target.closest(".door")
+            console.log(door.dataset.index)
+            selection=door.dataset.index
+            let doorToOpen=getdoor(selection)
+            doorToOpen.children[0].classList.add("open")
+            // document.querySelector("#msgBox").classList.add("show")
+        }
+
+        function treasure(n){
+            return n.children.length>1
+        }
+
+        let treasureBox=document.querySelector("#td")
+        console.log(treasure(treasureBox))
+
+        function getdoor(selectDoor){
+            let doors=document.querySelectorAll(".door")
+            for(let door of Array.from(doors)){
+                if(!treasure(door) && door.dataset.index!=selectDoor )
+                return door
+            }
+        }
+
+// function updateSelection(){
+//     alert("inside")
+//     let doors=Array.from(open.children)
+
+//     for (let door of doors){
+    
+    
+//         if(!door.children[0].classList.contains("open") && door.dataset.index!=selection ){
+//             selection=door.dataset.index
+//         }
+    
+//     }
+// }
+
+// function handle(state){
+//     if(state){
+//         updateSelection();
+// }
+//         let doors=Array.from(open.children)
+//         for (let door of doors){
+     
+//             door.children[0].classList.add("open")
+//         if(treasure(door) && door.dataset.index==selection )
+//                 haswon=true;
+//             }
+        
+//             alert(handle? "you won":"you lose")
+    
+// }
+
+
+
+
+
+
+
+
+
+function show(){
+    let option=document.querySelector(".yes-no ")
+
+    if(option.style.display =="block"){
+        option.style.display ='none';
+       
+    }
+    else{
+        option.style.display ='block';
+    }
+}
+       
+function display(){
+    let chocie = document.querySelector(".hidden")
+
+    if(chocie.style.display =="block"){
+        chocie.style.display='none';
+            
+    }
+    else{
+        chocie.style.display='block';
+    }
+}
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
