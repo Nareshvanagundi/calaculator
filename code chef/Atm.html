@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+     
+//      function widthDraw(){
+//         let balance = 25000;
+//        let Withdraw  = Number(prompt("Enter the Number yo Withdraw"))
+
+//        class bank{
+//          constructor(balance,Withdraw,reslut){
+//            this.balance = balance;
+//            this.Withdraw =Withdraw;
+//            this.reslut = balance - Withdraw;
+           
+//          }
+//        }
+ 
+//        let reslut;
+//        let Bank = new bank(balance,Withdraw,reslut)
+
+//        if(Bank.Withdraw % 5 == 0 ){
+         
+//        console.log( "Balance : "+Bank.balance)
+//         console.log( " WithDraw : "+Bank.Withdraw)
+//         console.log( "Result : "+Bank.reslut)
+    
+//     }else if (Bank.Withdraw === 25000){
+//         console.log( "Result : "+ Bank.reslut)
+         
+//         console.log( "Min Balance Should be 5000")
+      
+//        } else{
+//         console.log( "Amount is InSufficient To Withdraw")
+
+//       }
+//       console.log( Bank.reslut)
+
+    
+//   }
+//       widthDraw()
+
+function withDraw(){
+let balance = 25000;
+let Withdraw = Number(prompt("enter the Amount"))
+let remainBalance = balance - Withdraw;
+let MinBal = balance - Withdraw;
+
+   if(Withdraw === balance ){
+       console.log("Insufficient Balance")
+   }else if(MinBal <= 500 ){
+       console.log("MiN Balance  Should Be  500 ")
+ }else if(Withdraw % 100 ==0){
+    remainBalance += 50;
+         console.log(`Withdraw : ${Withdraw}`)
+         
+         if(confirm("Are you sure Withdraw Again")){
+         let conti = Number(prompt("Enter the Amount to Withdraw"))
+          let res = remainBalance - conti +50;
+         console.log(`WithDrawconti : ${conti}`)
+         console.log(`remainBalance : ${res}`)
+         console.log(`Thankyou Visit Again`)
+
+         }else{
+         console.log(`remainBalance : ${remainBalance}`)
+         console.log(`Thankyou Visit Again`)
+
+         }
+     
+}else{
+    console.log("Enter valid Amount")
+ }
+
+ }
+
+withDraw();
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </script>
+</body>
+</html>

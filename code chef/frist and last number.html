@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>frist and last number</title>
+
+    <style>
+         .input{
+              display: flex;
+              justify-content: center;
+              gap:2rem;
+         }
+    </style>
+</head>
+
+<body>
+
+     <div class="input">
+          <input type="number" name="number" id="number" class="number" autocomplete="off">
+          <button class="reslut" onclick="result()"> Result </button>
+          
+     </div>
+     <div class="display"></div>
+     <script>
+
+
+
+        //  let letter =  (prompt("Enter the Letter"));
+        //   let convArr = letter.split("").map(num => parseInt(num));
+        //   let fristAndLast = convArr.filter((filter, index) => index==0 || index==letter.length-1);
+        //   let reslut = fristAndLast.reduce((prev,next)=> prev +next)
+        //   console.log(reslut)
+
+ 
+
+ 
+
+// removing frist and last number 
+
+          // let number = prompt("Enter the Number")
+          // let NumArry  = number.split("");
+          // let value = ["0","1","2","3","5","6","7","8","9"]
+          // let count = NumArry.filter(removeSameNumber => !value.includes(removeSameNumber))
+          // console.log(count.length)
+
+        
+          
+// printing Small Factorial Number
+ 
+function result(){
+
+     let SmallF = document.querySelector(".number").value;
+
+  let InputValueResult;
+      let res =[];
+     for(let i=1; i <= SmallF; i++){
+        InputValueResult = i;
+        res.push(InputValueResult)
+    }
+
+     let inputData = res.reduce(((prev, next) => prev*next))
+     // console.log(res)
+
+// console.log(SmallF)
+
+     console.log(inputData)
+}
+
+
+
+
+
+
+
+
+
+
+     </script>
+</body>
+</html>
