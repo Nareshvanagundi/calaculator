@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calucator</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .Maincontainer {
+            width: 40%;
+            height: 80vh;
+            margin: 40px auto;
+            background: wheat;
+            border-radius: 17px;
+        }
+
+        .heading {
+            text-align: center;
+        }
+
+        .row-1 {
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .display {
+            padding: 1rem;
+            width: 80%;
+            height: 10vh;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1rem;
+            float: right;
+        }
+
+        .row-2 {
+            margin-left: 1em;
+            gap: 1rem;
+            width: 90%;
+            height: 8vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .row-3 {
+            margin-left: 1em;
+            gap: 1rem;
+            width: 90%;
+            margin-top: 1rem;
+            height: 8vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .row-4 {
+            margin-left: 1em;
+            gap: 1rem;
+            margin-top: 1rem;
+            width: 90%;
+            height: 8vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .row-5 {
+            margin-left: 1em;
+            gap: 1rem;
+            margin-top: 1rem;
+            width: 90%;
+            height: 8vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .row-6 {
+            margin-left: 1em;
+            gap: 1rem;
+            margin-top: 1rem;
+            width: 90%;
+            height: 8vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .btn {
+            color: blue;
+            font-size: 2rem;
+            font-family: monospace;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background: black;
+            color: white;
+        }
+
+        #clear {
+            color: blue;
+            font-size: 2rem;
+            transform: rotate(180deg);
+        }
+
+
+
+
+
+        @media only screen and (max-width: 600px) {
+            .row-2 {
+                width: 80%;
+                margin-left: 1em;
+            }
+
+            .row-3 {
+                width: 80%;
+                margin-left: 1em;
+            }
+
+            .row-4 {
+                width: 80%;
+                margin-left: 1em;
+            }
+
+            .row-5 {
+                width: 80%;
+                margin-left: 1em;
+            }
+
+            .row-6 {
+                width: 80%;
+                margin-left: 1em;
+            }
+
+            .btn {
+                font-size: 1rem;
+            }
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="Maincontainer">
+        <div class="heading">
+            Calucator
+        </div>
+        <div class="row-1">
+            <input type="text" name="text" class="display" id="input" title="textArea">
+        </div>
+
+        <div class="row-2">
+            <button class="btn" id="per">%</button>
+            <button class="btn" id="div">/</button>
+            <button class="equals" id="ClearAll" onclick="equals(this)">CE</button>
+            <button class="equals" id="clear" onclick="equals(this)">&#10145</button>
+        </div>
+
+        <div class="row-3">
+            <button class="btn" id="one" value="1">1</button>
+            <button class="btn" id="two">2</button>
+            <button class="btn" id="three">3</button>
+            <button class="btn" id="muptily">*</button>
+        </div>
+        <div class="row-4">
+            <button class="btn" id="four">4</button>
+            <button class="btn" id="five">5</button>
+            <button class="btn" id="six">6</button>
+            <button class="btn" id="add">+</button>
+        </div>
+        <div class="row-5">
+            <button class="btn" id="seven">7</button>
+            <button class="btn" id="eight">8</button>
+            <button class="btn" id="nine">9</button>
+            <button class="btn" id="sub">-</button>
+        </div>
+        <div class="row-6">
+            <button class="btn" id="sqr">**</button>
+            <button class="btn" id="zero">0</button>
+            <button class="btn" id="dot">.</button>
+            <button class=" equals" id="equal" onclick="equals(this)">=</button>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        // let click = document.querySelector(".Maincontainer")
+        let equal = document.querySelector(".equals");
+        let input = document.querySelector(".display")
+
+        let button = Array.from(document.querySelectorAll(".btn"))
+
+        button.map(button => {
+            button.addEventListener("click", (e) => {
+                console.log(e.target.innerHTML);
+                input.value += e.target.innerHTML;
+            })
+        })
+
+
+
+
+
+
+
+
+
+        function equals(el) {
+            let input = document.querySelector(".display")
+            switch (el.innerHTML) {
+                    case "CE":
+                        input.value = ""
+                        break;
+
+                    case "➡":
+                        input.value = input.value.slice(0, -1)
+                         break;
+
+                     case "=":
+                      try{
+                          if(input.value!=""){
+                        input.value = eval(input.value)
+                    }else{
+                        input.value ="Please Enter Value"
+                    }
+                      }catch{
+                          input.value ="Syntax Error..!"
+                      }
+                  
+                    
+                    break;
+
+
+
+                }
+            }
+
+
+
+          
+
+
+
+
+// click.onclick =(e)=>{
+
+// }
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
