@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeeklyBudget</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            background-image: url(./images/resize.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-transform: capitalize;
+        }
+
+        .title {
+            color: blue;
+            padding: 20px;
+        }
+
+        .center {
+            text-align: center;
+
+        }
+
+        .flex {
+            display: flex;
+
+        }
+
+        .budgetStart {
+            justify-content: space-around;
+            background: none;
+
+        }
+
+        .expense,
+        .list,
+        .row,
+        .container,
+        h1,
+        .inputFlied,
+        .input,
+        label,
+        .amount,
+        .submitBtn,
+        .sumbit,
+        .remainAmount,
+        .balance,.displayBudget
+        ,.displayBudgetLeft ,.budget,.left{
+            background: none;
+            margin-top: 5px;
+        }
+
+        .expenseadd {
+            background: none;
+            font-size: 1.5rem;
+            color: red;
+        }
+
+        .submitBtn {
+            width: 50%;
+
+        }
+
+        .inputFlied {
+            border: none;
+            border-bottom: 2px solid black;
+            outline: none;
+             margin-top: 14px;
+        }
+
+        .inputDetails {
+            position: relative;
+        }
+
+
+
+
+        .inputDetails label {
+            position: absolute;
+            left: 53px;
+            font-size: 1.2rem;
+            font-family: 'Zen Old Mincho', serif;
+            color: blue;
+            top: -14px;
+            transition: 0.5s;
+            margin-top: 14px;
+        }
+
+        .inputDetails input:focus~label,
+        .inputDetails input:valid~label {
+            font-size: 12px;
+            color: red;
+        }
+
+        .background {
+            background: whitesmoke;
+            border-radius: 5px;
+        }
+        .displayBudget{
+              width: 100%;
+              background: green;
+              color: white;
+              border-radius: 5px;
+        }
+        .displayBudgetLeft{
+            width: 100%;
+              background: red;
+              color: white;
+              border-radius: 5px;
+        }
+        .error{
+           color: red;
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="title text-center">
+        <h1>calculate your weekly budget</h1>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="budgetStart flex">
+
+                <div class="expense center ">
+                    <p class="expenseadd">add more expenses here</p>
+
+                    <div class="inputDetails input">
+                        <input type="text" name="name" id="name" class="inputFlied transport error" autocomplete="off"
+                            required>
+                        <label for="name"> Name</label>
+                    </div>
+
+
+
+                    <div class="inputDetails input">
+                        <input type="text" name="amount" id="amount" class="inputFlied useramount error" autocomplete="off" required>
+                        <label for="amount">amount</label>
+                    </div>
+                    <div class="sumbit">
+                        <input type="submit" value="add" class="submitBtn" >
+                    </div>
+
+                </div>
+                <div class="list center">
+                    <p class="expenseadd"> list</p>
+                    <div class="background">
+                        <div class="balance">
+                          <p class="displayBudget"> Budget : <span  class="budget"></span></p>
+
+                        </div>
+                        <div class="remainAmount">
+                            <p class="displayBudgetLeft"> left : <span class="left"></span></p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script>
+      
+        let budgetForm = document.querySelector(".budgetStart")
+        let balance = document.querySelector(".budget")
+        let left = document.querySelector(".left")
+        let userInput = document.querySelector(".transport").vaule
+        let usersAmount = document.querySelector(".useramount").vaule
+
+    
+        let sumbitBtn = document.querySelector(".submitBtn")
+        sumbitBtn.addEventListener("click", addBudget)
+       
+ class Budget{
+     constructor(budget){
+         this.budget = Number (budget);
+         this.budgetLeft = this.budget;
+     }
+     
+ }
+
+ class HTML{
+     inserBudget(amount){
+        balance.innerHTML = `${amount}`;
+        left.innerHTML = `${amount}`
+     }
+    //  printMessage(message, className){
+    //      let messageDisplay = document.querySelector(".div")
+    //      messageDisplay.classList.add("error","alert",className)
+    //      messageDisplay.appendChild(document.createTextNode(message))
+    //  }
+ }
+  let html = new HTML();
+
+let budget,userBuget;
+
+        eventListner();
+        function eventListner(){
+           
+    
+          document.addEventListener("DOMContentLoaded", function (){
+
+            userBuget = prompt("Enter the your Budget ")
+            console.log(userBuget)
+    
+          if(userBuget === null || userBuget === "" || userBuget === "0" ){
+              window.location.reload()
+          }else{
+            budget = new Budget(userBuget)
+            html.inserBudget(budget.budget)
+          } 
+        
+        })
+    }
+ 
+     function addBudget(e){
+            e.preventDefault();
+
+            let userInput = document.querySelector(".transport").vaule
+        let usersAmount = document.querySelector(".useramount").vaule
+
+            if(userInput === '' || usersAmount === ''){
+                // html.printMessage("Enter the Value ","alert-danger")
+                console.log("Invaild")
+
+            }else{
+                console.log("corret")
+            }
+        }
+         
+
+  
+   
+    </script>
+
+
+</body>
+
+</html>
