@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alien </title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" type="text/css" href="//use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href="./css/imageSlider.css">
+    <link rel="stylesheet" href="./css/imageSlider.min.css">
+ 
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" >
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <!-- <script>
+        document.addEventListener( 'DOMContentLoaded', function () {
+          new Splide( '#image-slider' ).mount();
+        } );
+      </script> -->
+</head>
+
+<body>
+
+    <main class="container">
+        <header>
+            
+            <div class="logo">
+                <!-- <img src="./img/logo.png" alt="companyLogo" class="logo-img"> -->
+                <a href="index.html" style=" text-decoration: none;cursor: pointer;"><img src="./img/logo.png" alt="companyLogo" class="logo-img"></a>
+                
+            </div>
+          
+            <div class="searchBar">
+                <input type="search" id="searchList" class="searchList">
+                <i class="icon fa fa-search"></i>
+           
+            </div>
+
+            <div class="cart">
+                <div class="login">
+                    <button class="loginPage">Login</button>
+                    <button class="cartBtn"> <i class="fa fa-shopping-cart">cart</i></button>
+                </div>
+              
+
+                
+            </div>
+        </header>
+
+        <img src="./img/giphy.gif" alt="" srcset="" class="loading">
+
+
+        <section class="productSection">
+
+            <div class="productList">
+                
+                <div class="row-1">
+                    <div class="image">
+                      <img src="./img/moblie.png" alt="mobilePhone" srcset="" class="productImage">
+                    </div>
+                    <div class="deviceName">
+                        <!-- <a href="frontPage.html" style=" text-decoration: none;cursor: pointer; color: black;"><h1 class="Name">  moblie</h1></a>  -->
+                        <h1 class="Name" onclick="setProductName(this)" prodName="mobile">  moblie</h1>
+                    </div>
+
+                </div>
+
+                <div class="row-2">
+                    <div class="image">
+                        <img src="./img/electronic.jpeg" alt="electronicGaget" srcset="" class="productImage">
+                    </div>
+                    <div class="deviceName">
+                        <h1 class="Name" onclick="setProductName(this)" prodName="stabilizer">v guard stabilizer</h1>
+                    </div>
+
+                </div>
+
+                <div class="row-3">
+                    <div class="image">
+                        <img src="./img/furniture.jpg" alt="furnituire" srcset="" class="productImage">
+                    </div>
+                    <div class="deviceName">
+                        <h1 class="Name" onclick="setProductName(this)" prodName="furniture">furniture</h1>
+                    </div>
+
+                </div>
+
+                <div class="row-4">
+                    <div class="image">
+                        <img src="./img/deskotop.jpg" alt="desktopImage" srcset="" class="productImage">
+                    </div>
+                    <div class="deviceName">
+                        <h1 class="Name" onclick="setProductName(this)" prodName="desktop">sony desktop</h1>
+                    </div>
+
+                </div>
+
+                <div class="row-5">
+                    <div class="image">
+                        <img src="./img/parle.jpg" alt="parleBisciut" srcset="" class="productImage">
+                    </div>
+                    <div class="deviceName">
+                        <h1 class="Name" onclick="setProductName(this)" prodName="biscuits">parle-g</h1>
+                    </div>
+
+                </div>
+
+                <div class="row-12">
+                    <div class="image">
+                        <img src="./img/parle.jpg" alt="parleBisciut" srcset="" class="productImage">
+                    </div>
+                    <div class="deviceName">
+                        <h1 class="Name" onclick="setProductName(this)" prodName="biscuits">parle-g</h1>
+                    </div>
+
+                </div>
+
+                <!-- <div class="row-13">
+                    <div class="image">
+                        <img src="./img/parle.jpg" alt="parleBisciut" srcset="" class="productImage">
+                    </div>
+                    <div class="deviceName">
+                        <h1 class="Name" onclick="setProductName(this)" prodName="biscuits">parle-g</h1>
+                    </div>
+
+                </div> -->
+
+            </div>
+        </section>
+
+        <section class="deilveryImage">
+            <img src="./img/d.jpg" alt="deilveryImage" srcset="" class="deilveryImagePic">
+
+        </section>
+          
+       
+
+       
+
+
+       <section class="shoesSlots">
+           <h2 class="title">shoes</h2>
+        <div class="shoesList">
+                
+            <div class="row-6">
+                <div class="image">
+                    <img src="./img/shoe6.jpg" alt="shoes" srcset="" class="productImage">
+                </div>
+                <div class="deviceName">
+                    <h1 class="Name">nike</h1>
+                </div>
+
+            </div>
+
+            
+
+            <div class="row-7">
+                <div class="image">
+                    <img src="./img/shoes1.jpg" alt="shoes" srcset="" class="productImage">
+                </div>
+                <div class="deviceName">
+                    <h1 class="Name">addidas casual shoes</h1>
+                </div>
+
+            </div>
+
+            <div class="row-8">
+                <div class="image">
+                    <img src="./img/shoe2.jpg" alt="shoes" srcset="" class="productImage">
+                </div>
+                <div class="deviceName">
+                    <h1 class="Name">casual shoes</h1>
+                </div>
+
+            </div>
+
+            <div class="row-9">
+                <div class="image">
+                    <img src="./img/shoes3.jpg" alt="shoes" srcset="" class="productImage">
+                </div>
+                <div class="deviceName">
+                    <h1 class="Name">puma</h1>
+                </div>
+
+            </div>
+
+            <div class="row-10">
+                <div class="image">
+                    <img src="./img/shoe4.jpg" alt="shoes" srcset="" class="productImage">
+                </div>
+                <div class="deviceName">
+                    <h1 class="Name">reebook</h1>
+                </div>
+
+            </div>
+
+            <div class="row-11">
+                <div class="image">
+                    <img src="./img/shoes9.jpeg" alt="shoes" srcset="" class="productImage">
+                </div>
+                <div class="deviceName">
+                    <h1 class="Name">bata</h1>
+                </div>
+
+            </div>
+
+        </div>
+
+       </section>
+
+       <!-- <section class="imageSlider"> --> 
+        <!-- <h2 class="title">Shrit</h2>
+        <div class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide" style="width: 100%; height: 300px;">
+                        <img src="./img/shirt02.jpg" class="slideImg" style="width: 60%; display: flex; justify-content: center; align-items: center;">
+                        <h2 class="name">nnnn</h2>
+
+                    </li>
+                    <li class="splide__slide" style="width: 100%; height: 300px; text-align: center;">
+                        <img src="./img/shirt03.jpg" class="slideImg" style="width: 60%; display: flex; justify-content: center; align-items: center;">
+                        <h2 class="name">nnnn</h2>
+
+                    </li>
+                    <li class="splide__slide" style="width: 100%; height: 300px;">
+                        <img src="./img/shirt05.jpg" class="slideImg" style="width: 60%;display: flex; justify-content: center; align-items: center;">
+                        <h1 class="name">nnnn</h1>
+
+                    </li>
+
+                    <li class="splide__slide" style="width: 100%; height: 300px;">
+                        <img src="./img/shirt03.jpg" class="slideImg" style="width: 60%;display: flex; justify-content: center; align-items: center;">
+                        <h1 class="name">nnnn</h1>
+
+                    </li>
+                    <li class="splide__slide" style="width: 100%; height: 300px;">
+                        <img src="./img/shirt05.jpg" class="slideImg" style="width: 60%;display: flex; justify-content: center; align-items: center;">
+                        <h1 class="name">nnnn</h1>
+
+                    </li>
+                </ul>
+            </div>
+          </div> -->
+
+           <h2 class="title">casual Shrit</h2>
+          <div class="splide">
+              <div class="splide__track">
+                  <ul class="splide__list slide">
+                      <li class="splide__slide slide">
+                          <img src="./img/shirt02.jpg" class="slideImg">
+                          <h2 class="name">shrits</h2>
+                          
+
+
+                          <p>Top brands for Phones and Electronics. Latest trends in Fashion. Free Shipping available* Easy & Fast Delivery. </p>
+  
+                      </li>
+                      <li class="splide__slide slide">
+                          <img src="./img/shirt03.jpg" class="slideImg">
+                          <h2 class="name">shrits</h2>
+                       <p>Top brands for Phones and Electronics. Latest trends in Fashion. Free Shipping available* Easy & Fast Delivery. </p>
+                         
+  
+                      </li>
+                      <li class="splide__slide slide">
+                          <img src="./img/shirt05.jpg" class="slideImg">
+                          <h2 class="name">shrits</h2>
+                       <p>Top brands for Phones and Electronics. Latest trends in Fashion. Free Shipping available* Easy & Fast Delivery. </p>
+                         
+  
+                      </li>
+  
+                      <li class="splide__slide slide">
+                          <img src="./img/shirt03.jpg" class="slideImg">
+                          <h2 class="name">shrits</h2>
+                         
+                          <p>Top brands for Phones and Electronics. Latest trends in Fashion. Free Shipping available* Easy & Fast Delivery. </p>
+  
+                      </li>
+                      <li class="splide__slide slide">
+                          <img src="./img/shirt05.jpg" class="slideImg">
+                          <h2 class="name">shrits</h2>
+                          
+                          <p>Top brands for Phones and Electronics. Latest trends in Fashion. Free Shipping available* Easy & Fast Delivery. </p>
+                    
+                      </li>
+                  </ul>
+              </div>
+            </div>
+          
+            </section> 
+
+            <section>
+                <h2 class="title">casual pant</h2>
+                <div class="carousel" data-flickity='{ "groupCells": true }'>
+                    <div class="carousel-cell"><img src="./img/pant1.jpg" alt="" srcset="">
+                        <h1 class="name">pants</h1>
+                        
+                        <p>Top brands for Phones and Electronics. Latest trends in Fashion. Free Shipping available* Easy & Fast Delivery. </p>
+
+                    </div>
+                    <div class="carousel-cell"><img src="./img/pant1.jpg" alt="" srcset="">
+                        <h1 class="name">pants</h1>
+                       
+                       
+                        <p>Top brands for Phones and Electronics. Latest trends in Fashion. Free Shipping available* Easy & Fast Delivery. </p>
+
+                    
+                    </div>
+                    <div class="carousel-cell"><img src="./img/pant3.jpg" alt="" srcset="">
+                        <h1 class="name">pants</h1>
+
+                        <p>Top brands for Phones and Electronics. Latest trends in Fashion. Free Shipping available* Easy & Fast Delivery. </p>
+
+                    </div>
+                    <div class="carousel-cell"><img src="./img/pant4.jpg" alt="" srcset="">
+                        <h1 class="name">pants</h1>
+                        <p>Top brands for Phones and Electronics. Latest trends in Fashion. Free Shipping available* Easy & Fast Delivery. </p>
+                       
+                        
+                    </div>
+                    <div class="carousel-cell"><img src="./img/pant1.jpg" alt="" srcset="">
+                        <h1 class="name">pants</h1>
+                        
+                        <p>Top brands for Phones and Electronics. Latest trends in Fashion. Free Shipping available* Easy & Fast Delivery. </p>
+
+                    </div>
+                    <div class="carousel-cell"><img src="./img/pant1.jpg" alt="" srcset="">
+                        <h1 class="name">pants</h1>
+                       
+                        <p>Top brands for Phones and Electronics. Latest trends in Fashion. Free Shipping available* Easy & Fast Delivery. </p>
+
+                    </div>
+                    <div class="carousel-cell"><img src="./img/pant1.jpg" alt="" srcset="">
+                        <h1 class="name">pants</h1>
+                        
+                        <p>Top brands for Phones and Electronics. Latest trends in Fashion. Free Shipping available* Easy & Fast Delivery. </p>
+
+                    </div>
+                    <div class="carousel-cell"><img src="./img/pant3.jpg" alt="" srcset="">
+                        <h1 class="name">pants</h1>
+                        <p>Top brands for Phones and Electronics. Latest trends in Fashion. Free Shipping available* Easy & Fast Delivery. </p>
+                       
+
+                    </div>
+                    <div class="carousel-cell"><img src="./img/pant1.jpg" alt="" srcset="">
+                        <h1 class="name">pants</h1>
+                       
+                        <p>Top brands for Phones and Electronics. Latest trends in Fashion. Free Shipping available* Easy & Fast Delivery. </p>
+
+                    </div>
+                    <div class="carousel-cell"><img src="./img/pant1.jpg" alt="" srcset="">
+                        <h1 class="name">pants</h1>
+                        
+                        <p>Top brands for Phones and Electronics. Latest trends in Fashion. Free Shipping available* Easy & Fast Delivery. </p>
+
+                    </div>
+                    <div class="carousel-cell"><img src="./img/pant4.jpg" alt="" srcset="">
+                        <h1 class="name">pants</h1>
+                       <p>Top brands for Phones and Electronics. Latest trends in Fashion. Free Shipping available* Easy & Fast Delivery. </p>
+
+                    </div>
+                  </div>
+            </section>
+
+
+          
+
+       <footer>
+           simple alien Site
+       </footer>
+
+        
+    </main>
+
+    
+     
+
+    <script src="js/imageSlider.js"></script>
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <!-- <script src="moblie.js"></script> -->
+
+  <script>
+     
+
+
+
+
+  </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: 'Roboto Serif', sans-serif;
+}
+
+.category{
+    width: 100%;
+    background: #f0f0f0;
+}
+.categoryLink{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.mobilecCategory{
+   width: 100%;
+   display: flex;
+
+}
+.mobile{
+    width: 10%;
+    padding: 10px;
+    margin: 1em 1em;
+    display: flex;
+    flex-direction:column;
+gap: 0.5rem;
+}
+.mobileView{
+    width: 30%;
+    height: 100%;
+    /* display: flex; */
+}
+
+.slideveiw{
+    width: 30%;
+
+    /* height: 100%; */
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;    /* height: 20px; */
+padding: 1px;
+border: 2px solid black;
+}
+.phoneImg{
+    width: 100%;
+}
+.productView {
+    width: 100%;
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    background: white;
+    border-radius: 5px;
+    /* align-content: center; */
+}
+.phoneviewg{
+    width: 40%;
+ 
+}
+.mobileName{
+    cursor: pointer;
+}
+
+.mobileBtn{
+    width: 100%;
+    margin-top: 3em;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+ gap:6rem;
+}
+.addCart, .buyNow{
+width: 100%;
+border: none;
+outline: none;
+font-size: 1.5rem;
+padding: 10px;
+background:orange;
+border-radius: 10px;
+}
+
+.mobileSpiec{
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.star{
+
+    margin-top: 1em;
+    
+    /* padding: 10px; */
+}
+.stars{
+    color:white;
+}
+.starBtn{
+    width: 10%;
+    outline:none;
+    border: none;
+    background: green;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+
+    border-radius: 5px;
+}
+
+.price{
+    margin-top: 1em;
+}
+.offer{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.offerTag{
+    margin-top: 1em;
+    display: flex;
+    gap:0.5rem;
+}
+.bankOffer{
+    font-size: 1rem;
+}
+.bold{
+    font-size:1rem;
+}

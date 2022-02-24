@@ -1,0 +1,583 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    /* font-family: 'Lato', sans-serif;   */
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: #e4e7ed;
+}
+header {
+    width: 100%;
+    display: flex;
+background: #00B8FF;
+}
+
+.logo{
+    width: 25%;
+    /* height: 10vh; */
+    display: flex;
+    justify-content: end;
+ /* background:blue; */
+}
+
+.logo-img{
+    width: 66%;
+}
+
+.searchBar{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+ /* background: yellow; */
+}
+
+.searchList{
+    width: 60%;
+    height: 5vh;
+    /* position: relative; */
+    border-radius: 10px;
+    background: antiquewhite;
+}
+
+
+.cart{
+    width:25%;
+display:flex;
+}
+
+.login{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.loginPage {
+    width: 130px;
+    border: none;
+    outline: none;
+    background: #BB8FCE;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-family: 'Merriweather', serif;
+    /* padding: 10px; */
+}
+.loginPage:hover, .cartBtn:hover{
+    -ms-transform: scale(-.5); 
+    -webkit-transform: scale(-1.1); 
+    transform: scale(1.1); 
+}
+.cartBtn {
+    width:130px;
+    border: none;
+    outline: none;
+    background: #BB8FCE;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-family: 'Merriweather', serif;
+    /* padding: 10px; */
+
+}
+
+.productSection{
+    width:100%;
+}
+
+.productList{
+    width:80%;
+    margin:20px auto;
+    display: flex;
+    gap: 0.65rem;
+    /* background: #BB8FCE; */
+}
+
+.row-1,.row-2,.row-3,.row-4,.row-5{
+    width:100%;
+   /* height:300px; */
+   border-radius: 10px;
+}
+
+.image{
+    width:100%;
+    /* height: 200px; */
+    display: flex;
+   justify-content:center;
+   /* border-radius: 10px; */
+   background:white;
+}
+.productImage{
+
+    width: 80%;
+    transition: .7s;
+}
+.productImage:hover{
+    -ms-transform: scale(.5); 
+    -webkit-transform: scale(1.1); 
+    transform: scale(1.1); 
+}
+.deviceName{
+    font-family: 'Lato', sans-serif;
+font-family: 'Roboto Serif', sans-serif;
+    /* height: 100px;
+    border-radius: 10px; */
+    margin-top: 10px;
+    /* background:#ffd3c1; */
+}
+.Name{
+    font-family: 'Lato', sans-serif;
+font-family: 'Roboto Serif', sans-serif;
+    text-align: center;
+}
+.deilveryImage{
+    width: 100%;
+    height: 300px;
+}
+.deilveryImagePic{
+    width: 100%;
+    height: 300px;
+}
+
+
+
+.shoesSlots{
+    width:100%;
+}
+
+.shoesList{
+    width:80%;
+    margin:20px auto;
+    display: flex;
+    /* gap: 0.65rem; */
+    /* background: #BB8FCE; */
+}
+
+.row-6,.row-7,.row-8,.row-9,.row-10,.row-11{
+    width:100%;
+   /* height:300px; */
+   border-radius: 10px;
+}
+.row-10,.row-11{
+    display:none;
+}
+.image{
+    width:100%;
+    /* height: 200px;
+     */
+    display: flex;
+   justify-content:center;
+   /* border-radius: 10px; */
+   background:white;
+}
+.productImage{
+
+    max-width: 80%;
+    transition: .7s;
+}
+.productImage:hover{
+    -ms-transform: scale(.5); 
+    -webkit-transform: scale(1.1); 
+    transform: scale(1.1); 
+}
+.deviceName{
+    font-family: 'Lato', sans-serif;
+font-family: 'Roboto Serif', sans-serif;
+    /* height: 100px; */
+    border-radius: 10px;
+    /* cursor: pointer; */
+}
+.Name{
+    font-family: 'Lato', sans-serif;
+font-family: 'Roboto Serif', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+.title{
+    margin-top: 0.6em;
+    text-align: center;
+    font-size:2.5rem;
+color: #8B2700;
+font-family: 'Oswald', sans-serif;
+background: #fff0ea;
+}
+
+footer{
+width: 100%;
+height: 100px;
+font-size: 5rem;
+text-align: center;
+margin-top: 0.5em;
+background: #ff652a;
+}
+
+.slider{
+    width:20% !important;
+    height: 400px;
+
+}
+.slide-Img{
+    width: 100% !important;
+    height: 300px;
+
+}
+.splide__list{
+    width:100%;
+    height: 100px;
+}
+.slide{
+    width: 46% !important;   
+    margin-top: 1.5em !important; 
+
+    /* height: 400px; */
+}
+.slide:hover{
+    border: 1px solid;
+    padding: 10px;
+    /* box-shadow: 5px 10px 8px 10px #555353; */
+    box-shadow: 10px 10px 5px #aaaaaa;
+  
+}
+.splide__slide{
+    margin: 1em !important;
+}
+.slideImg{
+    width:100% !important;
+}
+.name{
+    /* font-family: 'Lato', sans-serif; */
+font-family: 'Roboto Serif', sans-serif;
+    text-align: center;
+    font-size: 1rem;
+}
+/* .splide__track{
+    width:100% !important;
+}
+.splide__slide{
+    width: 60% !important;
+}
+.splide__slide img {
+    
+    width: 39% !important;
+} */
+
+/* body { font-family: sans-serif; } */
+
+.carousel {
+    margin-top: 0.5em ; 
+
+  /* background: #EEE; */
+}
+
+.carousel-cell {
+  width: 18%;
+  /* height: 200px; */
+  /* margin-right: 10px; */
+  /* background: #8C8; */
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  /* content: counter(carousel-cell); */
+  line-height: 200px;
+  font-size: 80px;
+  /* color: white; */
+}
+
+.carousel{
+    width:100%;
+    /* height:200px; */
+}
+.carousel-cell img {
+    width: 100% !important;
+}
+.carousel-cell:hover{
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 10px 10px 5px #aaaaaa;
+
+}
+
+
+.row-12,.row-13{
+    display: none;
+}
+p{
+    font-size: 0.7rem;
+    /* font-family: 'Inconsolata', monospace; */
+    /* font-family: 'Lato', sans-serif;
+    font-family: 'Roboto Serif', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+         /* letter-spacing: 0.1rem; */
+         /* line-height: 1px; */
+        /* margin-top: 0.5em; */
+
+   
+}
+/* p:hover{
+    /* padding: 10px; */
+/* }  */
+
+.loading{
+    display: none;
+}
+
+@media only screen and (max-width:600px) {
+    header{
+        width: 100%;
+        /* height: 10vh; */
+        display: flex;
+      
+    }
+
+    .logo{
+        width: 25%;
+        display: flex;
+        justify-content:flex-end;
+    }
+    .searchBar{
+        width: 50%;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+
+    .cart{
+        width: 25%;
+        display: flex;
+        justify-content:flex-end;
+    }
+
+    .loginPage {
+        align-items: center;
+        width: 70px;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .cartBtn {
+        align-items: center;
+        width: 70px;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+    .logo-img {
+        width: 97%;
+    }
+    .searchList{
+      width: 60%;
+    }
+    .productList{
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr;
+    }
+    .Name {
+        /* font-family: 'Lato', sans-serif; */
+font-family: 'Roboto Serif', sans-serif;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+     .splide__slide img {
+        margin-left: 500px;
+        vertical-align: bottom;
+        width:256px;
+        /* height: 100px; */
+    }
+    .shoesSlots{
+        width:100%;
+    }
+    .shoesList{
+        display: grid;
+         grid-template-columns: 2fr 2fr 2fr;
+         margin-top: 10px;
+    }
+    .slidee{
+        width:100%;
+        /* height:500px; */
+    }
+    .splide__slide{
+        margin: 0px !important;
+    }
+
+    footer{
+        width: 100%;
+        margin-top: 0.5em;
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 0.5rem;
+    }
+
+}
+
+
+
+
+
+@media only screen and (max-width:900px) {
+    header{
+        width: 100%;
+    }
+    .logo{
+        width:25%;
+    
+    }
+    .searchBar{
+        width: 50%;
+    }
+    .cart{
+        width:25%;
+    }
+    .login{
+        width: 100%;
+    }
+    .loginPage {
+        width: 81px;
+        font-size: 1rem;
+    }
+    .cartBtn {
+        width: 81px;
+        font-size: 1rem;
+    }
+
+.productList {
+    width: 80%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    gap: 0.65rem;
+    /* background: #BB8FCE; */
+}
+    .shoesList {
+        width: 80%;
+        margin: 20px auto;
+       grid-template-columns: 3fr 3fr 3fr;
+        display: grid;
+    }
+    .row-10,.row-11{
+        display: block;
+    }
+    .row-12,.row-13{
+        display: block;
+    }
+    p{
+        /* font-size: 0.9rem; */
+        /* font-family: 'Inconsolata', monospace; */
+        /* font-family: 'Lato', sans-serif; */
+        /* font-family: 'Roboto', sans-serif; */
+        margin-top: 0.5em;
+        font-family: 'Poppins', sans-serif;
+               /* letter-spacing: 0.1rem; */
+       
+    }
+ }
+
+@media only screen and (max-width:390px) {
+
+    header{
+        width: 100%;
+        /* height: 10vh; */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .logo {
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .searchBar{
+        display: none;
+    }
+  .cart {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+}
+    .loginPage {
+        align-items: center;
+        width: 70px;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .cartBtn {
+        align-items: center;
+        width: 70px;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .productList{
+        width:100%;
+        display:grid;
+        grid-template-columns: 2fr 2fr;
+    }
+
+    .shoesList{
+        width:100%;
+        display:grid;
+        grid-template-columns: 2fr 2fr; 
+    }
+
+    .splide__slide img {
+        margin-left: 500px;
+        vertical-align: bottom;
+        width:200px;
+        /* height: 100px; */
+    }
+    .splide__slide{
+        margin: 5px !important;
+    }
+    .row-1,.row-2, .row-3,.row-4,.row-5,.row-6,.row-7,.row-8,.row-9,.row-10,.row-11{
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .deviceName{
+        font-family: 'Lato', sans-serif;
+font-family: 'Roboto Serif', sans-serif;
+        width: 150px;
+       /* height: 100px;
+        */
+    }
+    .Name {
+        /* font-family: 'Lato', sans-serif; */
+font-family: 'Roboto Serif', sans-serif;
+        font-size: 1rem;
+        text-align: center;
+        cursor: pointer;
+    }
+    footer{
+        font-size: 2rem;
+        width:100%;
+        margin-top: 0.5em;
+    }
+    p{
+        font-size: 0.5rem;
+    }
+    .name{
+        font-size: 0.5rem;
+    }
+    
+}
+
+

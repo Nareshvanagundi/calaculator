@@ -1,0 +1,187 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.product{
+    width: 100%;
+    display:flex ;
+    margin: 1em;
+gap: 2rem;
+
+}
+.productCat{
+    width: 20%;
+   
+    /* flex-direction: column; */
+}
+.filterLocation{
+    width:100%;
+    display: flex;
+    background: white;
+    border-radius: 5px;
+    justify-content:space-around;
+    align-content: center;
+    padding: 5px;
+}
+.fliterBtn{
+    font-size: 1.5rem;
+}
+.clearBtn{
+    width: 100%;
+    border: none;
+    outline: none;
+    background:white;
+    color: blue;
+    font-size: 1rem;
+}
+
+.productDisplay{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 5px;
+
+}
+.mobilelinks{
+    width: 100%;
+    margin: 1em;
+}
+.mobileTitle{
+    margin: 0.5em;
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+    /* justify-content:center; */
+}
+.mobileShow{
+    font-size: 0.9rem;
+}
+.sortPrice{
+    width: 100%;
+    margin: 0.5em;
+
+}
+.linkList{
+    display: flex ;
+justify-content:flex-start;
+align-items: center;
+gap: 1.2rem;
+text-decoration: none;
+list-style: none;
+}
+
+.linkSort{
+text-decoration: none;
+    font-size: 1.2rem;
+    font-weight:bold;
+    list-style: none;
+    color: blue;
+}
+.onclickproductList{
+    margin: 0.5em;
+    width: 100%;
+    display:flex;
+   
+}
+.mobilesection{
+    width: 20%;
+;
+    /* border: 2px solid; */
+}
+
+.mobilesectionView{
+    width: 40%;
+}
+.mobilesectionVi{
+    display: flex;
+    justify-content:center;
+    padding: 1px;
+}
+.mobileDetails{
+    width: 60%;
+    display:flex;
+    flex-direction: column;
+    margin-left: 0.5em;
+}
+.specification{
+    margin: 1em;
+}
+.priceSelection{
+    width: 20%;
+    display: flex;
+    /* justify-content: center; */
+    align-items:center;
+    flex-direction: column;
+    padding: 10px;
+}
+.priceValue{
+    width: 100%;
+    font-size: 1.5rem;
+}
+.priceReduce{
+    display: flex;
+    gap: 0.5rem;
+    /* justify-content:center; */
+}
+.priceReduce{
+    text-decoration: line-through;
+    font-size: 0.9rem;
+    margin: 0.2rem;
+    color: gray;
+}
+.discount{
+    color: green;
+}
+.delivery{
+    margin: 0.5em;
+}
+.exchangeValue{
+    font-size:0.8rem
+}
+.next{
+    float:right;
+    width: 10%;
+    padding: 10px;
+    border-radius: 5px;
+    outline:none;
+    border: none;
+    background: orange;
+    font-size: 1rem;
+}
+.paginaton{
+    display: flex;
+    justify-content:space-between;
+    /* text-align: center; */
+}
+
+.prev{
+    float:left;
+    width: 10%;
+    padding: 10px;
+    border-radius: 5px;
+    outline:none;
+    border: none;
+    background: orange;
+    font-size: 1rem;
+ 
+
+}
+@keyframes slide{
+    0% {left: 0px;}
+    100% {left: 200px;}
+
+    
+}
+.hide{
+    display: none;
+}
+.show{
+    display: flex;
+}

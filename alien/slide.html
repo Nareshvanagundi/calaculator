@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <style>
+
+    
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    /* external css: flickity.css */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel {
+  background: #EEE;
+  height: 44vh;
+}
+
+.carousel-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  /* background: #8C8; */
+  border-radius: 5px;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  /* content: counter(gallery-cell); */
+  line-height: 200px;
+  font-size: 80px;
+  /* color: white; */
+}
+
+
+.carousel-cell{
+  display:flex;
+  justify-content: center;
+  width: 40%;
+}
+
+
+.carousel-cell img{
+width: 100% !important;
+object-fit: cover;
+/* background-size: cover; */
+}
+
+h1{ 
+  text-align: center;
+  font-size: 1rem;
+}
+.ima{
+  display:flex;
+  justify-content: center;
+  width: 50% !important;
+  /* height:150px !important; */
+}
+div{ 
+  
+  height:200px !important
+}
+p{ 
+  font-size: 0.5rem;
+}
+  </style>
+</head>
+<body>
+
+  <div class="carousel" data-flickity='{ "autoPlay": true }'>
+    <div class="carousel-cell">
+      <div>
+
+        <div class="ima">
+          <img src="./furniture.jpg" alt="" srcset="">
+        </div>
+      <h1>sathvik softech</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ex quod reprehenderit accusamus tempora ad rerum, dolorum ipsum et illum nihil est quibusdam dolores perspiciatis vel aspernatur adipisci repellendus? Suscipit.</p>
+      </div>
+    </div>
+
+    <div class="carousel-cell">
+      <div>
+<div class="ima">
+      <img src="./furniture.jpg" alt="" srcset="">
+    </div>
+      <h1>sathvik softech</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ex quod reprehenderit accusamus tempora ad rerum, dolorum ipsum et illum nihil est quibusdam dolores perspiciatis vel aspernatur adipisci repellendus? Suscipit.</p>
+
+      </div>
+    </div>
+
+    <div class="carousel-cell">
+      <div>
+
+        <div class="ima">
+          <img src="./furniture.jpg" alt="" srcset="">
+        </div>
+      <h1>sathvik softech</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ex quod reprehenderit accusamus tempora ad rerum, dolorum ipsum et illum nihil est quibusdam dolores perspiciatis vel aspernatur adipisci repellendus? Suscipit.</p>
+
+      </div>
+    </div>
+    <div class="carousel-cell">
+      <div>
+
+        <div class="ima">
+          <img src="./furniture.jpg" alt="" srcset="">
+        </div>
+      <div class="height">
+      <h1>sathvik softech</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ex quod reprehenderit accusamus tempora ad rerum, dolorum ipsum et illum nihil est quibusdam dolores perspiciatis vel aspernatur adipisci repellendus? Suscipit.</p>
+    </div>
+      </div>
+    </div>
+    <div class="carousel-cell">
+      <div>
+
+        <div class="ima">
+          <img src="./furniture.jpg" alt="" srcset="">
+        </div>
+      <h1>sathvik softech</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ex quod reprehenderit accusamus tempora ad rerum, dolorum ipsum et illum nihil est quibusdam dolores perspiciatis vel aspernatur adipisci repellendus? Suscipit.</p>
+
+      </div>
+    </div>
+    
+  </div>
+
+
+  </div>
+  <script>
+    var elem = document.querySelector('.carousel');
+var flkty = new Flickity( elem, {
+  // options
+  cellAlign: 'left',
+  contain: true
+});
+
+// element argument can be a selector string
+//   for an individual element
+var flkty = new Flickity( '.main-carousel', {
+  // options
+});
+  </script>
+  
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+</body>
+</html>
