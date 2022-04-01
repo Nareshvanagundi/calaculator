@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border {
+            position: relative;
+            width: 20%;
+            
+            display: flex;
+            justify-content: center;
+            
+            padding:10px;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .container input {
+            display: block;
+            width: 100%;
+            border-radius: 3px;
+            outline: none;
+            border-bottom: 2px solid black;
+        }
+
+        .container label {
+            position: absolute;
+            top: 0px;
+            left: 14px;
+            color: red;
+            background: white;
+            transition: all 0.5s ease;
+            pointer-events: none;
+        }
+
+        input:focus {
+            background: orangered;
+        }
+
+        .container input:focus~label,
+        .container input:valid~label {
+
+            top: -10px;
+            left: 08px;
+            color: blue;
+            /* background: black; */
+        }
+
+        #modal:not(:target) {
+            opacity: 0;
+            visibility: hidden;
+
+        }
+
+        #modal:target {
+            opacity: 1;
+            visibility: visible;
+            position: relative;
+            width: 80%;
+
+            padding: 15px;
+            border: 1px solid black;
+            margin: 5px;
+            transition: all 1s ease;
+
+        }
+
+        #close:target {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 80px;
+            transition: all 1s ease;
+        }
+
+        .open {
+            margin: 5px;
+        }
+
+        .close {
+            position: absolute;
+            left: 635px;
+            top: 0px;
+            margin: 5px;
+        }
+
+        a {
+            text-transform: none;
+            text-decoration: none;
+            text-align: right;
+            color: black;
+        }
+
+
+
+        #navbar:not(:target) {
+            /* opacity: 0;
+            visibility: hidden; */
+             display:none;
+        }
+
+        #navbar:target {
+            opacity: 1;
+            visibility: visible;
+            position: fixed;
+            background: orange;
+            width: 20%;
+            height: 100%;
+            margin: 5px;
+            transition: all 1s ease;
+          z-index: 1;
+        }
+
+        .nav {
+            display: flex;
+            FLEX-DIRECTION: column;
+            gap: 0.5rem;
+            align-items: center;
+          
+
+        }
+        .btnclose{
+            float: right;
+        }
+
+
+       
+    </style>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <button class="menu"><a href="#navbar"> menu </a></button>
+
+    <div id="close">
+
+        <div id="navbar">
+            <button class="btnclose"><a href="#close">close </a></button>
+
+            <nav class="nav">
+
+                <a href="#">link 1</a>
+                <a href="#">link 2</a>
+                <a href="#">link 3</a>
+            </nav>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="border">
+    <div class="container">
+        <input type="text" required>
+        <label for="nn">naresh</label>
+    </div>
+
+</div>
+
+    <div class="border">
+        <div class="container">
+            <input type="text" required>
+            <label for="nn">naresh</label>
+        </div>
+
+    </div>
+
+    <button class="open"><a href="#modal"> open </a></button>
+
+    <div id="close">
+
+        <div id="modal">
+            <button class="close"><a href="#close">close </a></button>
+
+
+            <p class="modal-par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia illum est voluptatibus
+                quisquam magnam dolore iste iure, eaque animi architecto, fugit quis. Harum, commodi optio? Totam omnis
+                sequi ea nesciunt!</p>
+
+
+        </div>
+    </div>
+
+
+
+    <!-- nav -->
+
+   
+</body>
+
+</html>
