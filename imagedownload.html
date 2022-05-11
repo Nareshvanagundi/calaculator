@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image Downloader</title>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        background:white;
+        color:black;
+    }
+    .audio{
+        width:90%;
+        margin:10px auto;
+        height: 100px;
+     border:1px solid black;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    }
+    .audio{
+background-color: aqua;
+    }
+
+    .button{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+       
+    }
+    
+    .download{
+        padding:5px;
+        width:10%;  
+        background:rgba(72, 72, 240, 0.753);
+        border: none;
+        outline: none;
+        border-radius: 5px;
+    }
+    .background{
+        background: rgba(0, 0, 0, 0.76);
+        color:white;
+    }
+:root{
+    --primary-color : rgba(20, 16, 16, 0.61);
+    --sceondary-color:#fff;
+}
+
+label{
+    width:10%;
+    height:10vh;
+    border-radius: 20px;
+    background:navy;
+ display:block;
+}
+label::before{
+position: absolute;
+top:300px;
+left: 1px;
+content: "";
+width:20px;
+height:20px;
+border-radius: 50%;
+background:black;
+
+}
+
+label.active::before{
+    left:100px;
+    background:white;
+    
+}
+/* .ddd{
+    color:black;
+} */
+.atag{
+   
+    color:var(--sceondary-color);
+}
+body.light{
+    background-color: var(--primary-color);
+    color:var(--sceondary-color);
+}
+
+</style>
+
+</head>
+<body>
+    <h1>mwad;karfka;l</h1>
+
+    <audio id="range" src="[iSongs.info] 01 - Toofan.mp3" type="audio/mp3" controls="controls"></audio>
+
+<a href="[iSongs.info] 01 - Toofan.mp3" download="filename.mp3" class="ddd">DownloadButton</a> 
+  <div class="audio">
+<a href="[iSongs.info] 01 - Toofan.mp3" download> <audio  class="paly" controls type="audio/mpeg" src="[iSongs.info] 01 - Toofan.mp3" ></audio></a>
+<button class="myAudioElement">play</button>
+<!-- <a href="./download.png" download><img src="./download.png" alt="" srcset=""></a> -->
+<button class="myAudio">pause</button>
+  </div>
+
+  <div class="button">
+      <button class="download">download</button>
+  </div>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dolores deserunt quis ad nostrum et commodi, eum perferendis ipsum animi. Possimus exercitationem minima magnam nobis libero quae porro. Atque, labore.</p>
+
+  <label class="dark-mode"> </label>
+  <script>
+
+
+    
+let play = document.querySelector(".myAudioElement")
+           let playes = document.querySelector(".myAudio")
+
+
+  
+       play.addEventListener("click",playVideo)
+       playes.addEventListener("click",Playpause)
+
+ 
+ 
+ 
+ 
+ 
+       function playVideo() {
+    let audio = document.querySelector(".paly")
+    audio.play();
+
+  
+  }
+
+  function Playpause(){
+    let audio = document.querySelector(".paly")
+
+    audio.pause();
+  }
+
+let ff= "45"
+  if(ff===45){
+      console.log("yes")
+  }else{
+      console.log("no")
+  }
+
+
+
+let download = document.querySelector(".download")
+
+download.addEventListener("click",()=>{
+//   let textColor = document.getElementsByTagName("*")
+    let textColor=document.body;
+    textColor.classList.toggle("background");
+  
+         
+
+})
+
+let body = document.getElementsByTagName("body")[0];
+let dark = document.querySelector(".dark-mode")
+
+dark.addEventListener("click",()=>{
+let aTag = document.querySelector(".ddd")
+
+
+    dark.classList.toggle("active");
+   document.body.classList.toggle("light")
+//    aTag.classList.add("atag")
+   if(document.body.classList.contains("light")){
+    aTag.style.color="white"
+
+    // aTag.classList.add("atag")
+}else{
+    aTag.style.color="black"
+
+    // aTag.classList.remove("atag")
+
+    
+  }
+})
+  </script>
+</body>
+</html>
