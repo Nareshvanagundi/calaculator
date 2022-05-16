@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task</title>
+    <link rel="stylesheet" href="./scss/style.css">
+</head>
+
+<body>
+    <div class="mainconatiner">
+        <header>
+            <div class="brand">
+                <p class="brand-Name">ar-shakir</p>
+            </div>
+
+            <nav class="menu">
+                <ul class="menu-List">
+                    <li class="menu-Link">home</li>
+                    <li class="menu-Link">about us</li>
+                    <li class="menu-Link">portfolio</li>
+                    <li class="menu-Link">terminator</li>
+                    <li class="menu-Link">Blog</li>
+                </ul>
+            </nav>
+
+            <div class="explore">
+                <button class="explore-Btn">explore more</button>
+            </div>
+
+        </header>
+
+
+        <main>
+            <div class="content">
+                <h1>find a better</h1>
+                <h1>solution for your</h1>
+                <div class="content-bg">
+                    <div class="orange"></div>
+                    <div class="skyblue"></div>
+                    <h1 class="content-bi">bussiness</h1>
+                </div>
+
+                <div class="content-tg">
+                    <p>from debt consolidation to dream gateway</p>
+                    <p>find a loan for meet our needs</p>
+                </div>
+
+
+                <div class="content-Btn">
+                    <button class="content-Bm">explore more</button>
+                    <div class="cup">
+                        <img src="./image/cup.png" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-Display">
+                <div class="star">
+                    <img src="./image/star-icon-isolated-on-background-modern-simple-sp-vector-21073177.jpg" alt=""
+                        srcset="">
+                </div>
+                <div class="bar-Graph">
+                    <div class="bar-End">
+                        <img src="./image/pie.png" alt="" srcset="">
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="./image/virat-removebg-preview.png" alt="" srcset="">
+                </div>
+            </div>
+        </main>
+
+        <div class="leads">
+            <div class="lead-cn">
+
+                <div class="leads-Graph">
+                    <div class="lead-new">
+                        <h2> new leads</h2>
+                        <p class="inc">+ 12.65%</p>
+
+                        <h3>$ 83.729</h3>
+
+                        <div class="graph-im">
+                            <img src="./image/graph.jpg" alt="" srcset="">
+                        </div>
+                    </div>
+
+                    <div class="lead-fl">
+                        <h4>2.5K+</h4>
+                        <p class="insta">insta followers</p>
+                        <p class="praph"> we stronly believe that successful content marketing</p>
+
+                    </div>
+                </div>
+
+                <div class="lead-P">
+                    <h4 class="perentage">95%</h4>
+                    <p class="insta">positive feedback</p>
+                    <p class="praph"> we stronly believe that successful content marketing</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="lead-par">
+
+                <div class="lead-cnt">
+                    <h5>
+                        our progress & marketing analysis
+                    </h5>
+                    <div class="lead-pd">
+                        <p class="parph-lead">
+                            and produce say the ten moments parties. simple innate
+                        </p>
+                        <p class="parph-lead">
+                            summer fat appear basket his desire joy. outward clothes
+                        </p>
+                        <p class="parph-lead">
+                            promise at gravity do excited
+                        </p>
+                    </div>
+                </div>
+
+
+               
+            </div>
+
+        </div>
+
+    </div>
+<script>
+
+
+    window.addEventListener("scroll", scrollAnimation)
+
+    function scrollAnimation(){
+        let lead= document.querySelector(".leads")
+
+        let currentPosition = lead.getBoundingClientRect().top;
+        let screenPosition = window.innerHeight/1.2;
+         if(currentPosition < screenPosition){
+            lead.classList.add("animatiom")
+         }else{
+            lead.classList.remove("animatiom")
+
+         }
+    }
+</script>
+   
+</body>
+
+</html>
